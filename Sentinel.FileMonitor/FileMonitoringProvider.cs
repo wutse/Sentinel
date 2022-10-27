@@ -171,7 +171,7 @@
                             // Put results into a buffer (prepend any unprocessed data retained from last read).
                             sb.Length = 0;
                             sb.Append(incomplete);
-                            sb.Append(Encoding.ASCII.GetString(buffer, 0, bytesSuccessfullyRead));
+                            sb.Append(Encoding.UTF8.GetString(buffer, 0, bytesSuccessfullyRead));
 
                             using (var sr = new StringReader(sb.ToString()))
                             {
